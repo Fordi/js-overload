@@ -1,0 +1,10 @@
+= Javascript Overloader
+
+The simple purpose of this library is to allow call signature based overloading similar to that you find in Java and Objective C in the context of Javascript, as well as permit the use
+of enforced strong typing without sacrificing the basic flexibility of JS.
+
+The basic call is: 
+
+var myClosure = Overloader(defaultMethod, argumentTypes, overloadMethod, argumen...);
+
+See test.js for a more elaborate example.
