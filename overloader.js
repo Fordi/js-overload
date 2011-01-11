@@ -2,7 +2,6 @@ module.exports = (function () {
 	String.is = function (a) { return a && !!a.length && !!a.substr; };
 	Boolean.is = function(a) { return a===true || a===false; };
 	Number.is = function(a) { return !isNaN(a); };
-	var Any={is: function () { return true; }};
 	var Rest={};
 	function Overloader() {
 		var a = [];
@@ -33,7 +32,8 @@ module.exports = (function () {
 		ret.overload.apply(this, arguments);
 		return ret;
 	};
-	Overloader.Any=Any;
+	Overloader.Any={is: function () { return true; }};
+	Overloader.Undefined={ is: function (a) { return (typeof a == 'undefined') }};
 	Overloader.Rest=Rest;
 	return Overloader;
 })();
