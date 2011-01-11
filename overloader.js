@@ -1,5 +1,5 @@
 module.exports = (function () {
-	String.is = function (a) { return !!a.length && !!a.substr; };
+	String.is = function (a) { return a && !!a.length && !!a.substr; };
 	Boolean.is = function(a) { return a===true || a===false; };
 	Number.is = function(a) { return !isNaN(a); };
 	var Any={is: function () { return true; }};
