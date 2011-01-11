@@ -8,4 +8,4 @@ var test = Overloader(
 	}
 );
 test();
-test('test', 1, 'blah', 'balls');
+test('test', 1, 'blah', [], {}, 123);
